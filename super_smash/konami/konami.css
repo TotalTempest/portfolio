@@ -1,0 +1,28 @@
+.bill {
+    background-image: url(Bill_Rizer.gif);
+    background-repeat: no-repeat;
+    position:fixed;
+    top:50%;
+    animation: konami 5s linear;
+    z-index:-1;
+    border:none;
+}
+.lance {
+    background-image: url(Lance_Bean.gif);
+    background-repeat: no-repeat;
+    position:fixed;
+    top:50%;
+    animation: konami 5s linear;
+    z-index:-1;
+    border:none;
+}
+@keyframes konami {
+    0% {
+        transform: translateX(-100%);
+        z-index:999999;
+    }
+    100% {
+        transform: translateX(1600%);
+        z-index:-1;
+    }
+}

@@ -1,0 +1,314 @@
+$serif: noto-serif, serif;
+$sans_serif: noto-sans, sans-serif;
+$font_color: black;
+$font_color_nav: white;
+$error_color: red;
+$primary_color: rgb(63, 63, 116);
+$secondary_color: #EAE8FF;
+$tertiary_color: #B0D7FF;
+
+/* Gradient Background */
+body {
+    //Design of the website will take inspiration from KOF 98' Vanilla
+    background: rgb(62,58,180);
+    background: linear-gradient(90deg, rgba(62,58,180,1) 0%, rgba(253,29,29,1) 100%);
+}
+
+#vertical-line {
+    height: 100%;
+    margin-top:-75px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $secondary_color;
+    width:1100px;
+    z-index:-1;
+}
+
+#username_teams {
+    text-align:center;
+    padding-top: 50px;
+    margin-bottom: -25px;
+    color:$font-color;
+    text-decoration: underline;
+}
+
+#stage_bg {
+    //background image will be decided by a randomizer
+    //background-image: url(img/stage/1.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+h1 {
+    font-family:$sans_serif;
+    font-size: 24px;
+    color:$font_color;
+    text-decoration: none;
+    padding-bottom:20px;
+}
+h4 {
+    font-family:$sans_serif;
+    font-size: 18px;
+    color:$error_color;
+    background-color:$secondary_color;
+    text-decoration: none;
+    padding:20px;
+    text-align: center;
+}
+nav {
+    background-color: $primary_color;
+    display:flex;
+    justify-content: space-between;
+    width:50%;
+    margin:auto;
+    padding: 15px 50px;
+    margin-bottom:75px;
+    a {
+        font-family:$sans_serif;
+        font-size: 24px;
+        color:$font_color_nav;
+        text-decoration: none;
+    }
+}
+nav a:nth-child(2){
+    text-align: right;
+}
+
+.options {
+    margin:0 0;
+    padding: 80px 25px;
+    font-family:$serif;
+    color:$font_color;
+    background-color:$secondary_color;
+    h3 {
+        font-size:20px;
+        padding-bottom:2px;
+        text-decoration-line: underline;
+    }
+    label {
+        font-size:14px;
+    }
+}
+#fighter_submit {
+    text-align:center;
+    width:400px;
+    padding: 25px 0;
+    display:none;
+    color: $font_color;
+    font-family: $sans_serif;
+    background-color:$tertiary_color;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    align-self:center;
+    input {
+        font-size: 16px;
+    }
+    label {
+        size: 18px;
+        font-family: $sans_serif;
+    }
+}
+
+.available-games {
+    display:flex;
+    justify-content:center;
+    h5 {
+        padding:5px;
+        border-style:solid;
+        border-width: 1px;
+        border-color: black;
+    }
+}
+.selected-characters {
+    display:flex;
+    justify-content:center;
+    //padding-bottom: 50px;
+    img {
+        height:250px;
+        width:250px;
+        object-fit: scale-down;
+        border-style:solid;
+        border-width: 5px;
+        border-color: black;
+        background-color:white;
+    }
+}
+#box4_column {
+    display:none;
+}
+.box_column h2 {
+    font-size: 24px;
+    text-align: center;
+    font-family: $serif;
+    color: $font_color;
+    background-color: $secondary_color;
+    background-size:cover;
+    margin-top:-5px;
+    padding:5px;
+}
+.names {
+    display:flex;
+    justify-content:center;
+    padding-bottom: 50px;
+}
+.roster {
+    display:flex;
+    justify-content:center;
+    overflow: hidden;
+    background-color:$primary_color;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    img {
+        width: 100px;
+        height: 200px;
+        margin: 0 0 -100px 0;
+        z-index:50;
+    }
+    #Billy {
+        margin-top: -40px;
+        transform: scale(2.5,1);
+        z-index:0;
+    }
+    #Orochi_Shermie {
+        margin-top: -20px;
+        transform:scale(1.2,1.2);
+    }
+    #Yamazaki {
+        margin-top: -20px;
+        transform: scale(1.2,1.2);
+    }
+    #Whip {
+        transform: scale(1.5,1);
+    }
+    #Foxy {
+        transform: scale(1.4,1.25);
+    }
+    #Shion {
+        margin-top: -10px;
+        margin-left: 50px;
+        margin-right: -50px;
+        transform: scale(2.5,1);
+        z-index:0;
+    }
+    #Saiki_Awakened {
+        margin-top: -15px;
+    }
+}
+.sign_in, .create_account {
+    text-align:center;
+    padding: 50px;
+    background-color:$secondary_color;
+    width: 50%;
+    margin: 0 auto;
+    input {
+        margin:10px;
+        padding: 5px;
+        font-size: 16px;
+    }
+    label {
+        size: 18px;
+        font-family: $sans_serif;
+    }
+}
+.team_name {
+    text-align: center;
+    padding-top: 75px;
+}
+.edit{
+    text-align: center;
+}
+#no_teams {
+    text-align: center;
+}
+
+@mixin Responsive {
+    // Javascript will be used to turn character sprites into icons
+    .roster {
+        img {
+            width: 75px;
+            height: 75px;
+            margin: 0;
+            z-index:50;
+        }
+        #Billy {
+            margin-top: 0;
+            transform: scale(1,1);
+            z-index:0;
+        }
+        #Orochi_Shermie {
+            margin-top: 0;
+            transform:scale(1,1);
+        }
+        #Yamazaki {
+            margin-top: 0;
+            transform: scale(1,1);
+        }
+        #Whip {
+            transform: scale(1,1);
+        }
+        #Foxy {
+            transform: scale(1,1);
+        }
+        #Shion {
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            transform: scale(1,1);
+            z-index:0;
+        }
+        #Saiki_Awakened {
+            margin-top: 0
+        }
+    }
+
+    .selected-characters {
+        align-items: center;
+        flex-wrap: wrap;
+        img {
+            // Height and Width cannot be changed due to Javascript
+            height:250px;
+            width:250px;
+        }
+    }
+
+    .options {
+        margin:0 100%;
+        padding: 25px;
+        text-align:center;
+        display:block;
+        form {
+            width:50vw;
+        }
+    }
+}
+
+/* Tablet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 501px) and (max-width: 900px)
+{
+    @include Responsive();
+
+    #vertical-line {
+        width:600px;
+    }
+}
+
+/* Mobile
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 500px)
+{
+    @include Responsive();
+
+    .available-games{
+        display:flex;
+        flex-wrap: wrap;
+        margin: 0 75px;
+    }
+
+    #vertical-line {
+        width:100%;
+    }
+}

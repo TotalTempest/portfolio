@@ -1,0 +1,429 @@
+@charset "UTF-8";
+/* Gradient Background */
+body {
+  background: #3e3ab4;
+  background: -webkit-gradient(linear, left top, right top, from(#3e3ab4), to(#fd1d1d));
+  background: linear-gradient(90deg, #3e3ab4 0%, #fd1d1d 100%);
+}
+
+#vertical-line {
+  height: 100%;
+  margin-top: -75px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #EAE8FF;
+  width: 1100px;
+  z-index: -1;
+}
+
+#username_teams {
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: -25px;
+  color: black;
+  text-decoration: underline;
+}
+
+#stage_bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  font-family: noto-sans, sans-serif;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+
+h4 {
+  font-family: noto-sans, sans-serif;
+  font-size: 18px;
+  color: red;
+  background-color: #EAE8FF;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #3f3f74;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  margin: auto;
+  padding: 15px 50px;
+  margin-bottom: 75px;
+}
+
+nav a {
+  font-family: noto-sans, sans-serif;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:nth-child(2) {
+  text-align: right;
+}
+
+.options {
+  margin: 0 0;
+  padding: 80px 25px;
+  font-family: noto-serif, serif;
+  color: black;
+  background-color: #EAE8FF;
+}
+
+.options h3 {
+  font-size: 20px;
+  padding-bottom: 2px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.options label {
+  font-size: 14px;
+}
+
+#fighter_submit {
+  text-align: center;
+  width: 400px;
+  padding: 25px 0;
+  display: none;
+  color: black;
+  font-family: noto-sans, sans-serif;
+  background-color: #B0D7FF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#fighter_submit input {
+  font-size: 16px;
+}
+
+#fighter_submit label {
+  size: 18px;
+  font-family: noto-sans, sans-serif;
+}
+
+.available-games {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.available-games h5 {
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+.selected-characters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.selected-characters img {
+  height: 250px;
+  width: 250px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  background-color: white;
+}
+
+#box4_column {
+  display: none;
+}
+
+.box_column h2 {
+  font-size: 24px;
+  text-align: center;
+  font-family: noto-serif, serif;
+  color: black;
+  background-color: #EAE8FF;
+  background-size: cover;
+  margin-top: -5px;
+  padding: 5px;
+}
+
+.names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 50px;
+}
+
+.roster {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background-color: #3f3f74;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.roster img {
+  width: 100px;
+  height: 200px;
+  margin: 0 0 -100px 0;
+  z-index: 50;
+}
+
+.roster #Billy {
+  margin-top: -40px;
+  -webkit-transform: scale(2.5, 1);
+          transform: scale(2.5, 1);
+  z-index: 0;
+}
+
+.roster #Orochi_Shermie {
+  margin-top: -20px;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.roster #Yamazaki {
+  margin-top: -20px;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.roster #Whip {
+  -webkit-transform: scale(1.5, 1);
+          transform: scale(1.5, 1);
+}
+
+.roster #Foxy {
+  -webkit-transform: scale(1.4, 1.25);
+          transform: scale(1.4, 1.25);
+}
+
+.roster #Shion {
+  margin-top: -10px;
+  margin-left: 50px;
+  margin-right: -50px;
+  -webkit-transform: scale(2.5, 1);
+          transform: scale(2.5, 1);
+  z-index: 0;
+}
+
+.roster #Saiki_Awakened {
+  margin-top: -15px;
+}
+
+.sign_in, .create_account {
+  text-align: center;
+  padding: 50px;
+  background-color: #EAE8FF;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.sign_in input, .create_account input {
+  margin: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.sign_in label, .create_account label {
+  size: 18px;
+  font-family: noto-sans, sans-serif;
+}
+
+.team_name {
+  text-align: center;
+  padding-top: 75px;
+}
+
+.edit {
+  text-align: center;
+}
+
+#no_teams {
+  text-align: center;
+}
+
+/* Tablet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .roster img {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    z-index: 50;
+  }
+  .roster #Billy {
+    margin-top: 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    z-index: 0;
+  }
+  .roster #Orochi_Shermie {
+    margin-top: 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .roster #Yamazaki {
+    margin-top: 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .roster #Whip {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .roster #Foxy {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .roster #Shion {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    z-index: 0;
+  }
+  .roster #Saiki_Awakened {
+    margin-top: 0;
+  }
+  .selected-characters {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .selected-characters img {
+    height: 250px;
+    width: 250px;
+  }
+  .options {
+    margin: 0 100%;
+    padding: 25px;
+    text-align: center;
+    display: block;
+  }
+  .options form {
+    width: 50vw;
+  }
+  #vertical-line {
+    width: 600px;
+  }
+}
+
+/* Mobile
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 500px) {
+  .roster img {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    z-index: 50;
+  }
+  .roster #Billy {
+    margin-top: 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    z-index: 0;
+  }
+  .roster #Orochi_Shermie {
+    margin-top: 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .roster #Yamazaki {
+    margin-top: 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .roster #Whip {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .roster #Foxy {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .roster #Shion {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    z-index: 0;
+  }
+  .roster #Saiki_Awakened {
+    margin-top: 0;
+  }
+  .selected-characters {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .selected-characters img {
+    height: 250px;
+    width: 250px;
+  }
+  .options {
+    margin: 0 100%;
+    padding: 25px;
+    text-align: center;
+    display: block;
+  }
+  .options form {
+    width: 50vw;
+  }
+  .available-games {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 75px;
+  }
+  #vertical-line {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

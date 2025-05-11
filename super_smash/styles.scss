@@ -1,0 +1,802 @@
+.logo {
+    /*position: sticky;
+    top:0;*/
+    z-index:99;
+    background:#FFFFFF;
+}
+nav {
+    display:flex;
+    height: 87px;
+    font-size:46px;
+    font-family: 'Roboto', sans-serif;
+    flex-flow:wrap;
+    position: sticky;
+    //top: 106px;
+    top:0;
+    z-index:2000;
+    a {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        //margin:auto;
+        width:20%;
+        height:87px;
+
+        //color:#1D3354;
+        background:#1D3354;
+        color:#FFFFFF;
+
+        text-decoration: none;
+        text-align:center;
+        vertical-align: middle;
+        transition: background-color 2s, height 2s, color 2s;
+    }
+
+    //$nav_animate_height: 104.4px;
+    $nav_animate_height: 120%;
+    //$nav_animate_height: 20px;
+
+    // a:nth-child(1) {
+    //     background:#C2C5F4;
+    // }
+    a:nth-child(1):hover {
+        background-color: #D82800;
+        color: #FFFFFF;
+        height:$nav_animate_height;
+    }
+    // a:nth-child(2) {
+    //     background:#CED0E7;
+    // }
+    a:nth-child(2):hover {
+        background-color: #747474;
+        color: #FFFFFF;
+        height:$nav_animate_height;
+    }
+    // a:nth-child(3) {
+    //     background:#DBDBDB;
+    // }
+    a:nth-child(3):hover {
+        background-color: #009400;
+        color: #FFFFFF;
+        height:$nav_animate_height;
+    }
+    // a:nth-child(4) {
+    //     background:#E7E6CE;
+    // }
+    a:nth-child(4):hover {
+        background-color: #0070EC;
+        color: #FFFFFF;
+        height:$nav_animate_height;
+    }
+    // a:nth-child(5) {
+    //     background:#F4F2C2;
+    // }
+    a:nth-child(5):hover {
+        background-color: #2038EC;
+        color: #FFFFFF;
+        height:$nav_animate_height;
+    }
+}
+.quiz {
+    font-family:'Roboto',sans-serif;
+    i {font-style: italic;}
+    b {font-weight: bold;}
+    smol {font-size:12px;}
+    font-size:36px;
+    color:#ffffff;
+    background-color: #000000;
+    height:650px;
+    h1 {
+        padding:25px;
+    }
+}
+.quizarea {
+    background-image: linear-gradient(125deg, #c2c5f4, #f4f2c2, #c2c5f4, #f4f2c2);
+    background-size:300% 100%;
+    animation: gradient 3s infinite linear;
+    height:75%;
+    width:75%;
+    margin:auto;
+    min-width: 955px;
+    h5 {
+        font-size:22px;
+        color:#000000;
+        padding-top:11px;
+    }
+    h3 {
+        font-size:25px;
+        color:#000000;
+        padding:20px 0 5px;
+    }
+    label {
+        font-size:22px;
+        color:#000000;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 100% 0;
+        }
+    }
+
+    .form {
+        padding-left:15%;
+        padding-right:15%;
+    }
+
+    @mixin result($flex) {
+        padding-top:7%;
+        display:none;
+            flex-wrap:wrap;
+            flex-direction:$flex;
+            align-items:center;
+            justify-content:center;
+            vertical-align: middle;
+            width:100%;
+            text-align:center;
+        img {height:300px;}
+        h3 {
+            font-family:'Super Smash 4.1',serif;
+            width:100%;
+        }
+    }
+    .result {
+        @include result(column);
+    }
+    .result_meme {
+        @include result(row);
+    }
+
+    //Individual ID's
+    #menacing {height:150px;}
+    #stutter {height:150px;}
+    #goofy {height:150px;}
+    #d20 {height:50px;}
+    #corn {font-size:18px;}
+
+    .quizsection {
+        display:none;
+        text-align:left;
+        margin-bottom:auto;
+        h3 {text-align:center;}
+        img {height:200px;}
+        imgalt {display:none;}
+        .medieval {
+            font-family: cabazon,serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size:27px;
+            color: #996515;
+        }
+
+        // https://codepen.io/wilder_taype/pen/pNXwMW
+        @keyframes click-wave {
+            0% {
+              height: 40px;
+              width: 40px;
+              opacity: 0.35;
+              position: relative;
+            }
+            100% {
+              height: 200px;
+              width: 200px;
+              margin-left: -80px;
+              margin-top: -80px;
+              opacity: 0;
+            }
+          }
+          
+          .option-input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            position: relative;
+            top: 13.33333px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 40px;
+            width: 40px;
+            transition: all 0.15s ease-out 0s;
+            background: #FFFFFF;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 0.5rem;
+            outline: none;
+            position: relative;
+            z-index: 1000;
+          }
+          .option-input:hover {
+            background: #9faab7;
+          }
+          .option-input:checked {
+            background: #40e0d0;
+          }
+          .option-input:checked::before {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            content: '✔';
+            display: inline-block;
+            font-size: 26.66667px;
+            text-align: center;
+            line-height: 40px;
+          }
+          .option-input:checked::after {
+            -webkit-animation: click-wave 0.65s;
+            -moz-animation: click-wave 0.65s;
+            animation: click-wave 0.65s;
+            background: #40e0d0;
+            content: '';
+            display: block;
+            position: relative;
+            z-index: 100;
+          }
+          .option-input.radio {
+            border-radius: 50%;
+          }
+          .option-input.radio::after {
+            border-radius: 50%;
+          }
+    }
+    
+
+    .iconrow {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        .icon {
+            display: flex;
+            flex-direction: column;
+            padding-bottom:50px; 
+            align-items:center;
+            padding:0 20px 0;
+            img {
+                $icon-size:90px;
+
+                height:$icon-size;
+                width:$icon-size;
+            }
+        }
+    }
+    .arrows {
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // justify-content:space-between;
+        // width:100%;
+        margin:-8% 0;
+        #back {
+            float:left;
+        }
+        #continue {
+            float:right;
+        }
+        img {
+            $icon-size:75px;
+
+            display: flex;
+            height:$icon-size;
+            width:$icon-size;
+            padding:25px;
+        }
+    }
+}
+
+img#beam {
+    width:100%;
+}
+
+@mixin section($color) {
+    text-align:center;
+    margin-top:-5px;
+    h2 {
+        font-family:'Super Smash 4.1',serif;
+        font-size:75px;
+        color:$color;
+        padding:84px;
+    }
+    h3 {
+        font-family:'Roboto',sans-serif;
+        font-size:24px;
+        color:$color;
+        padding:0px 200px;
+        padding-bottom:100px;
+    }
+}
+
+@mixin characters($width,$color){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+        font-family:'Roboto',sans-serif;
+            font-size:24px;
+            color:$color;
+        img {
+            display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:auto;
+                width:200px;
+                vertical-align: middle;
+        }
+        .diagram {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: $width;
+            padding-bottom:50px;
+            }
+}
+
+
+
+.rushdown {
+    background: rgb(216,40,0);
+    background: linear-gradient(180deg, rgba(216,40,0,1) 0%, rgba(240,188,60,1) 100%);
+    @include section(#FFFFFF);
+    .characters {
+        @include characters(16%, #FFFFFF);
+    }
+    .lastrow5 {
+        @include characters(16%, #FFFFFF);
+        padding-bottom: 100px;
+        // padding:0px 150px;
+    }
+}
+.zoning {
+    background: rgb(116,116,116);
+    background: linear-gradient(180deg, rgba(116,116,116,1) 0%, rgba(252,228,160,1) 100%);
+    @include section(#000000);
+    .characters {
+        @include characters(16%, #000000);
+    }
+    .lastrow4 {
+        @include characters(16%, #000000);
+        padding-bottom: 100px;
+        // padding:0px 250px;
+    }
+}
+.flexible {
+    background: rgb(0,148,0);
+    background: linear-gradient(180deg, rgba(0,148,0,1) 0%, rgba(252,252,252,1) 100%);
+    @include section(#000000);
+    .characters {
+        @include characters(16%, #000000);
+    }
+    .lastrow5 {
+        @include characters(16%, #000000);
+        padding-bottom: 100px;
+        // padding:0px 150px;
+    }
+}
+.baitpunish {
+    background: rgb(0,112,236);
+    background: linear-gradient(180deg, rgba(0,112,236,1) 0%, rgba(0,232,216,1) 100%);
+    @include section(#FFFFFF);
+    .characters {
+        @include characters(16%, #FFFFFF);
+    }
+    .lastrow2 {
+        @include characters(16%, #FFFFFF);
+        padding-bottom: 100px;
+        // padding: 0px 500px;
+    }
+}
+.custom {
+    background: rgb(32,56,236);
+    background: linear-gradient(180deg, rgba(32,56,236,1) 0%, rgba(252,252,252,1) 100%);
+    @include section(#FFFFFF);
+}
+.custom_section {
+    display:flex;
+    flex-flow:wrap;
+    flex-wrap:wrap;
+    flex-direction:row;
+    padding-bottom:200px;
+    font-family:'Roboto',sans-serif;
+        font-size:24px;
+        color:#000000;
+    .custom_left {
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        width:33%;
+        vertical-align: middle;
+        img {
+            height:300px;
+        }
+        p{
+            padding-top:25px;
+        }
+    }
+    .custom_center {
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        justify-content:center;
+        vertical-align: middle;
+        width: 33%;
+        font-size:30px;
+    }
+    @mixin custom_right($color1,$color2,$color3,$color4,$color5) {
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        justify-content:center;
+        vertical-align: middle;
+        width:33%;
+        img {
+            height:150px;
+        }
+        .diagram {
+            flex-direction: column;
+            padding-bottom: 5px;
+            }
+        .diagram:nth-child(1) {
+            background: $color1;
+        }
+        .diagram:nth-child(2) {
+            background: $color2;
+        }
+        .diagram:nth-child(3) {
+            background: $color3;
+        }
+        .diagram:nth-child(4) {
+            background: $color4;
+        }
+        .diagram:nth-child(5) {
+            background: $color5;
+        }
+    }
+    .custom_right1 {
+        @include custom_right(rgb(0,148,0),rgb(0,112,236),rgb(216,40,0),rgb(216,40,0),rgb(216,40,0));
+    }
+    .custom_right2 {
+        @include custom_right(rgb(116,116,116),rgb(0,148,0),rgb(116,116,116),rgb(0,148,0),#000000);
+    }
+    .custom_right3 {
+        @include custom_right(rgb(116,116,116),rgb(116,116,116),rgb(216,40,0),rgb(116,116,116),rgb(0,148,0));
+    }
+}
+.custom_diagram {
+    img {width:100%; max-width: 700px;}
+}
+
+
+/* Mobile Quiz
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 970px){
+    $form_background: #e8e8e8;
+    body {
+        background:$form_background;
+    }
+    nav {
+        font-size:20px;
+    }
+    .quiz {
+        font-family:'Roboto',sans-serif;
+        i {font-style: italic; padding:0 5px;}
+        b {font-weight: bold;}
+        smol {font-size:12px; display:inherit; text-align:center;}
+        font-size:36px;
+        color:#FFFFFF;
+        background-color: #000000;
+        //height:650px;
+        height:100%;
+        h1 {
+            padding:25px;
+            text-align:center;
+        }
+        br {display:none;}
+    }
+    .quizarea {
+        height:100%;
+        width:100%;
+        margin:auto;
+        min-width:auto;
+        h5 {
+            font-size:22px;
+            color:#000000;
+            padding-top:11px;
+        }
+        h3 {
+            font-size:25px;
+            color:#000000;
+            padding:20px 0 20px;
+        }
+        label {
+            display:flex;
+            align-items:center;
+            font-size:22px;
+            color:#000000;
+            border-style: solid;
+            border-width: 1px;
+            border-color:#000000;
+            height:75px;
+            padding-left:25px;
+        }
+        input[type=radio]:checked + label {
+            background-color:#fff275;
+        }
+    
+        .form {
+            padding-left:5%;
+            padding-right:5%;
+            background-color:$form_background;
+        }
+    
+        @mixin result($flex) {
+            padding-top:7%;
+            display:none;
+                flex-wrap:wrap;
+                flex-direction:$flex;
+                align-items:center;
+                justify-content:center;
+                vertical-align: middle;
+                width:100%;
+                text-align:center;
+            img {height:300px;}
+            h3 {
+                font-family:'Super Smash 4.1',serif;
+                width:100%;
+            }
+        }
+        .result {
+            @include result(column);
+        }
+        .result_meme {
+            @include result(row);
+            img {width:50%; height:50%;}
+        }
+    
+        //Individual ID's
+        #mii {height:100%; width:100%;}
+        #corn {font-size:18px;}
+    
+        .quizsection {
+            display:none;
+            text-align:left;
+            margin-bottom:auto;
+            h3 {text-align:center;}
+            img {display:none;}
+            imgalt {display:initial;}
+            .medieval {
+                font-family: cabazon,serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size:27px;
+                color: #996515;
+            }
+              .option-input {
+                display:none;
+              }
+        }
+        
+    
+        .iconrow {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:center;
+            .icon {
+                display: flex;
+                flex-direction: column;
+                padding-bottom:50px; 
+                align-items:center;
+                padding:0 20px 0;
+                img {
+                    $icon-size:90px;
+    
+                    height:$icon-size;
+                    width:$icon-size;
+                }
+            }
+        }
+        .arrows {
+            margin:0 0;
+            background-color:$form_background;
+            #back {
+                float:left;
+            }
+            #continue {
+                float:right;
+            }
+            img {
+                $icon-size:75px;
+    
+                display: flex;
+                height:$icon-size;
+                width:$icon-size;
+                padding:10px;
+            }
+        }
+    }
+    @mixin section($color) {
+        h2 {font-size:60px; color:$color;}
+        h3 {color:$color; padding:0px 50px; padding-bottom: 50px;}}
+
+    .rushdown {@include section(#FFFFFF);}
+
+    .zoning {@include section(#000000);}
+
+    .flexible {@include section(#000000);}
+
+    .baitpunish {@include section(#FFFFFF);}
+
+    .custom {@include section(#FFFFFF);}
+}
+
+
+
+/* Mobile
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 500px)
+{
+    nav {
+        display:none;
+    }
+    .logo {
+        position: sticky;
+        top:0;
+        background:#FFFFFF;
+    }
+    .quiz {
+        margin-bottom:-5px;
+    }
+    
+    @mixin section($color) {
+        text-align:center;
+        margin-top:-5px;
+        h2 {
+            font-family:'Super Smash 4.1',serif;
+            font-size:55px;
+            color:$color;
+            padding:84px;
+        }
+        h3 {
+            font-family:'Roboto',sans-serif;
+            font-size:24px;
+            color:$color;
+            padding:0px 50px;
+            padding-bottom:100px;
+        }
+    }
+    .rushdown {
+        @include section(#FFFFFF);
+        .characters {
+            @include characters(50%, #FFFFFF);
+        }
+        .lastrow5 {
+            @include characters(50%, #FFFFFF);
+            padding-bottom: 100px;
+            margin-bottom:-5px;
+            padding:0px 0px;
+        }
+    }
+    .zoning {
+        @include section(#000000);
+        .characters {
+            @include characters(50%, #000000);
+        }
+        .lastrow4 {
+            @include characters(50%, #000000);
+            padding-bottom: 100px;
+            margin-bottom:-5px;
+            padding:0px 0px;
+        }
+    }
+    .flexible {
+        @include section(#000000);
+        .characters {
+            @include characters(50%, #000000);
+        }
+        .lastrow5 {
+            @include characters(50%, #000000);
+            padding-bottom: 100px;
+            margin-bottom:-5px;
+            padding:0px 0px;
+        }
+    }
+    .baitpunish {
+        @include section(#FFFFFF);
+        .characters {
+            @include characters(50%, #FFFFFF);
+        }
+        .lastrow2 {
+            @include characters(50%, #FFFFFF);
+            padding-bottom: 100px;
+            margin-bottom:-5px;
+            padding:0px 0px;
+        }
+    }
+    .custom {
+        @include section(#FFFFFF);
+    }
+    .custom_section {
+        display:flex;
+        flex-flow:wrap;
+        flex-wrap:wrap;
+        flex-direction:column;
+        padding-bottom:200px;
+        font-family:'Roboto',sans-serif;
+            font-size:24px;
+            color:#000000;
+        .custom_left {
+            display:flex;
+            flex-wrap:wrap;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            width:100%;
+            vertical-align: middle;
+            padding-bottom:100px;
+            img {
+                height:300px;
+            }
+            p{
+                padding-top:25px;
+            }
+        }
+        .custom_center {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:center;
+            vertical-align: middle;
+            width: 100%;
+            font-size:30px;
+            padding-bottom:100px;
+        }
+        @mixin custom_right($color1,$color2,$color3,$color4,$color5) {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:center;
+            vertical-align: middle;
+            width:100%;
+            img {
+                height:150px;
+            }
+            .diagram {
+                flex-direction: column;
+                padding-bottom: 5px;
+                }
+            .diagram:nth-child(1) {
+                background: $color1;
+            }
+            .diagram:nth-child(2) {
+                background: $color2;
+            }
+            .diagram:nth-child(3) {
+                background: $color3;
+            }
+            .diagram:nth-child(4) {
+                background: $color4;
+            }
+            .diagram:nth-child(5) {
+                background: $color5;
+            }
+        }
+        .custom_right1 {
+            @include custom_right(rgb(0,148,0),rgb(0,112,236),rgb(216,40,0),rgb(216,40,0),rgb(216,40,0));
+        }
+        .custom_right2 {
+            @include custom_right(rgb(116,116,116),rgb(0,148,0),rgb(116,116,116),rgb(0,148,0),#000000);
+        }
+        .custom_right3 {
+            @include custom_right(rgb(116,116,116),rgb(116,116,116),rgb(216,40,0),rgb(116,116,116),rgb(0,148,0));
+        }
+    }
+}
