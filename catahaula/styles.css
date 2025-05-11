@@ -1,0 +1,707 @@
+@charset "UTF-8";
+/* Variables and Mixins
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+*/
+/* General For All
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+*/
+body {
+  background-color: #530000;
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*************  FONTS  
+
+font-family: 'Narnfont';
+font-family: 'Century Gothic';
+    Bold, Italic, Bold Italic
+
+*******************/
+b {
+  font-weight: bold;
+}
+
+p {
+  font-family: Century Gothic;
+}
+
+h2 {
+  color: #ebebeb;
+  font-family: Narnfont;
+  font-size: 64px;
+  color: #ebebeb;
+}
+
+h3 {
+  color: #ebebeb;
+  font-family: Narnfont;
+  font-size: 64px;
+  color: #ebebeb;
+}
+
+.note {
+  font-family: Century Gothic;
+  font-size: 19px;
+  text-align: center;
+  background-color: #FFDF00;
+  width: 85%;
+  margin: auto;
+  height: 34px;
+  padding-top: 10px;
+}
+
+nav {
+  text-align: center;
+  background-color: #5d3c24;
+  height: 70px;
+  width: 85%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  font-family: Century Gothic;
+  font-size: 32px;
+  color: #ebebeb;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+nav a:hover {
+  color: #b94e1a;
+}
+
+header {
+  background-image: url(images/beertable.jpg);
+  width: 85%;
+  margin: auto;
+  height: 720px;
+  background-size: cover;
+  background-position: center center;
+  text-align: left;
+}
+
+header h1 {
+  font-family: Narnfont;
+  font-size: 145px;
+  color: #ebebeb;
+  padding-top: 190px;
+  padding-left: 50px;
+}
+
+header h2 {
+  font-size: 64px;
+  padding-left: 100px;
+}
+
+.menuheader {
+  background-image: url(images/Bar.jpg);
+}
+
+.specialsheader {
+  background-image: url(images/Shrimp.jpeg);
+}
+
+.contactheader {
+  background-image: url(images/Phone.jpg);
+}
+
+.contactheader h1, .contactheader h2 {
+  text-align: right;
+  padding-right: 2%;
+}
+
+.about {
+  height: 719px;
+  text-align: center;
+  background-image: url(images/arabesque.png);
+  background-size: cover;
+  color: #ebebeb;
+  font-size: 18.5px;
+  width: 85%;
+  margin: auto;
+}
+
+.about h2 {
+  padding-top: 100px;
+}
+
+.about p {
+  padding-top: 50px;
+  padding-right: 25%;
+  padding-left: 25%;
+  text-align: left;
+}
+
+.offers {
+  background-image: url(images/burgerM.jpg);
+  background-size: cover;
+  background-position: center right;
+  height: 720px;
+  text-align: center;
+  color: #ebebeb;
+  font-size: 18.5px;
+  padding-left: 40%;
+  width: 85%;
+  margin: auto;
+}
+
+.offers h2 {
+  padding-top: 100px;
+}
+
+.offers p {
+  padding-top: 50px;
+}
+
+/*.giftcards {
+    text-align:center;
+    background-image:url(images/black_thread.png);
+    background-position:center center;
+    height:520px;
+    width:$width;
+    margin:auto;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    img {
+        height:200px;
+        width:200px;
+        margin:100px auto 0 auto;
+    }
+    h2 {
+        font-size:41px;
+    }
+    h3 {
+        font-size:41px;
+    }
+}*/
+.cta {
+  height: 100%;
+  position: relative;
+  width: 85%;
+  margin: auto;
+}
+
+.cta video {
+  width: 100%;
+}
+
+.ctabutton {
+  font-family: Narnfont;
+  font-size: 62px;
+  color: #ebebeb;
+  background-color: #75391c;
+  padding: 30px;
+  position: absolute;
+  right: 50px;
+  top: 75%;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.ctabutton:hover {
+  color: #530000;
+  background-color: #b94e1a;
+}
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #845a3a;
+  margin-top: -5px;
+}
+
+footer img {
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+footer img:hover {
+  opacity: .5;
+}
+
+.edu p {
+  font-size: 12px;
+  color: #ebebeb;
+  text-align: center;
+}
+
+.edu a {
+  color: #ebebeb;
+}
+
+.Fcolumn {
+  width: 33%;
+  padding: 2%;
+  text-align: center;
+  font-size: 22px;
+  color: #ebebeb;
+}
+
+.Fcolumn2 {
+  -webkit-column-count: 2;
+          column-count: 2;
+  font-size: 19px;
+  font-style: italic;
+}
+
+.subbg {
+  background-image: url(images/arabesque.png);
+  width: 85%;
+  margin: auto;
+}
+
+.subtitle {
+  width: 1004px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Narnfont;
+  color: #ebebeb;
+  font-size: 75px;
+  padding: 15px 0;
+}
+
+.sub {
+  width: 1004px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subspecials {
+  font-family: Century Gothic;
+  color: #ebebeb;
+  text-align: center;
+  background-color: #b94e1a;
+  padding: 20px;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.subspecialsT {
+  font-family: Century Gothic;
+  color: #ebebeb;
+  text-align: center;
+  background-color: #b94e1a;
+  padding: 20px;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.subspecials2 {
+  font-family: Century Gothic;
+  color: #ebebeb;
+  text-align: center;
+  background-color: #75391c;
+  padding: 20px;
+  font-size: 14px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.subcolumns {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.subleft {
+  font-family: Century Gothic;
+  color: #ebebeb;
+  font-size: 28px;
+  text-align: right;
+  background-color: #b94e1a;
+  padding: 30px;
+  padding-right: 15px;
+  margin-left: auto;
+}
+
+.subright {
+  margin-right: auto;
+}
+
+.subright input {
+  font-size: 18px;
+  text-align: left;
+  width: 500px;
+  font-family: serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .subright input {
+    width: 300px;
+  }
+}
+
+.subright textarea {
+  font-size: 18px;
+  text-align: left;
+  width: 500px;
+  font-family: serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 250px;
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .subright textarea {
+    width: 300px;
+  }
+}
+
+.subright {
+  background-color: #75391c;
+  padding: 30px;
+}
+
+.subcontact {
+  margin: auto;
+  width: 727px;
+  background-color: #b94e1a;
+  color: #ebebeb;
+  text-align: center;
+  font-family: Century Gothic;
+  font-style: italic;
+  font-size: 22px;
+  padding: 10px;
+}
+
+input[type=checkbox] {
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+}
+
+.submit {
+  text-align: center;
+  margin-top: 15px;
+}
+
+input[type=submit] {
+  background-color: #b94e1a;
+  border: solid;
+  border-width: thick;
+  color: #ebebeb;
+  padding: 5px 35px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Century Gothic;
+  font-size: 30px;
+  font-style: italic;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+input[type=submit]:hover {
+  background-color: #ebebeb;
+  color: #b94e1a;
+}
+
+/* Tablet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  p {
+    font-size: 17px;
+  }
+  .note {
+    font-size: 17px;
+    padding-bottom: 5px;
+    padding-top: 0px;
+  }
+  header h1 {
+    font-size: 90px;
+    padding-top: 230px;
+    padding-left: 25px;
+  }
+  header h2 {
+    font-size: 43px;
+    padding-left: 40px;
+  }
+  .about h2 {
+    font-size: 50px;
+    padding-top: 75px;
+  }
+  .about p {
+    padding-top: 25px;
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+  .offers {
+    padding-left: 20%;
+  }
+  .offers h2 {
+    padding-top: 50px;
+    font-size: 50px;
+  }
+  .giftcards img {
+    margin-top: 200px;
+  }
+  .giftcards h2 {
+    font-size: 64px;
+    padding-top: 10px;
+  }
+  .giftcards h3 {
+    padding-top: 5px;
+    font-size: 50px;
+  }
+  .ctabutton {
+    font-size: 31px;
+    padding: 25px;
+    right: 50px;
+    top: 75%;
+  }
+  footer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .Fcolumn {
+    width: 50%;
+  }
+  .subtitle {
+    font-size: 65px;
+    padding-bottom: 10px;
+  }
+  .subleft {
+    font-size: 24px;
+    padding: 25px 10px;
+    padding-right: 5px;
+  }
+  .subright {
+    margin-right: auto;
+  }
+  .subright input {
+    margin-bottom: 15px;
+  }
+  .subright textarea {
+    height: 250px;
+  }
+  .subright {
+    padding: 30px;
+  }
+  .subcontact {
+    width: 479px;
+    font-size: 18px;
+  }
+  input[type=checkbox] {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+/* Mobile
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 500px) {
+  nav {
+    display: none;
+  }
+  .note {
+    display: none;
+  }
+  header {
+    width: 100%;
+    background-position: right;
+  }
+  header h1 {
+    font-size: 85px;
+    padding-top: 230px;
+    padding-left: 0px;
+    text-align: center;
+  }
+  header h2 {
+    font-size: 34px;
+    text-align: right;
+    padding-left: 0px;
+    padding-right: 25px;
+  }
+  .about, .offers, .cta, .subbg {
+    width: 100%;
+  }
+  .specialsheader {
+    padding-top: 80px;
+  }
+  .contactheader {
+    background-position: center center;
+  }
+  .contactheader h1 {
+    padding-top: 270px;
+  }
+  .about h2 {
+    font-size: 45px;
+    padding-top: 50px;
+  }
+  .about p {
+    padding-top: 35px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .offers {
+    padding-left: 0%;
+  }
+  .offers h2 {
+    padding-top: 50px;
+    font-size: 45px;
+  }
+  .cta {
+    background-image: url(images/beerfillstill.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+  }
+  .cta video {
+    opacity: 0;
+  }
+  .ctabutton {
+    font-size: 44px;
+    text-align: center;
+    padding: 25px;
+    margin-top: 232px;
+    right: 0px;
+    top: 0%;
+    position: static;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    color: #530000;
+    background-color: #b94e1a;
+  }
+  .ctabutton:hover {
+    color: #ebebeb;
+    background-color: #75391c;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Fcolumn {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+  .subtitle {
+    font-size: 55px;
+  }
+  .subspecialsT {
+    font-size: 17px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .subspecials2 {
+    padding: 20px;
+    font-size: 14px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .subleft {
+    font-size: 24px;
+    padding: 10px;
+  }
+  .subright input {
+    font-size: 17px;
+    text-align: left;
+    width: 300px;
+    font-family: Century Gothic;
+    margin-bottom: 23px;
+  }
+  .subright textarea {
+    font-size: 17px;
+    text-align: left;
+    width: 300px;
+    font-family: Century Gothic;
+    height: 100px;
+  }
+  .subright {
+    padding: 10px;
+  }
+  .subcontact {
+    font-size: 20px;
+    width: 445px;
+  }
+  .submit {
+    margin-top: 25px;
+    margin-bottom: -20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,661 @@
+/* Variables and Mixins
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+*/
+$width: 85%;
+$subcontact: 22px;
+$subcontact2: 18px;
+
+$white: #ebebeb;
+$brown: #75391c;
+$darkbrown: #5d3c24;
+$darkerbrown: #530000;
+$gold: #FFDF00;
+$redbrown: #b94e1a;
+$palebrown: #845a3a;
+
+@mixin form {
+    font-size:18px;
+    text-align:left;
+    width:500px;
+    font-family:serif;
+    display:flex;
+    flex-wrap:wrap;
+    @media screen and (min-width: 501px) and (max-width: 900px){
+        width:300px;
+    }
+}
+
+/* General For All
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+*/
+body {background-color: $darkerbrown; font-size: 100%;}
+img {max-width: 100%;}
+
+* {
+    text-decoration:none;
+    box-sizing:border-box;
+}
+/*************  FONTS  
+
+font-family: 'Narnfont';
+font-family: 'Century Gothic';
+    Bold, Italic, Bold Italic
+
+*******************/
+
+b {
+    font-weight:bold;
+}
+p {
+    font-family:Century Gothic;
+}
+h2 {
+    color:$white;
+    font-family:Narnfont;
+    font-size:64px;
+    color:$white;
+}
+h3 {
+    color:$white;
+    font-family:Narnfont;
+    font-size:64px;
+    color:$white;
+}
+
+.note {
+    font-family: Century Gothic;
+    font-size:19px;
+    text-align:center;
+    background-color:$gold;
+    width:$width;
+    margin:auto;
+    height:34px;
+    padding-top:10px;
+}
+
+nav {
+    text-align:center;
+    background-color:$darkbrown;
+    height:70px;
+    width:$width;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items:center;
+    position: sticky;
+    top:0;
+    z-index:1000;
+    a {
+        font-family:Century Gothic;
+        font-size:32px;
+        color:$white;
+        transition: all .2s ease-in;
+    }
+    a:hover {
+        color:$redbrown;
+    }
+}
+
+header {
+    background-image:url(images/beertable.jpg);
+    width:$width;
+    margin:auto;
+    height:720px;
+    background-size:cover;
+    background-position:center center;
+    text-align:left;
+    h1 {
+        font-family:Narnfont;
+        font-size:145px;
+        color:$white;
+        padding-top:190px;
+        padding-left:50px;
+    }
+    h2 {
+        font-size:64px;
+        padding-left:100px;
+    }
+}
+
+.menuheader {background-image:url(images/Bar.jpg);}
+.specialsheader {background-image:url(images/Shrimp.jpeg);}
+.contactheader {
+    background-image:url(images/Phone.jpg);
+    h1, h2 {
+        text-align:right;
+        padding-right:2%
+    }
+}
+
+.about {
+    height:719px;
+    text-align:center;
+    background-image:url(images/arabesque.png);
+    background-size:cover;
+    color:$white;
+    font-size:18.5px;
+    width:$width;
+    margin:auto;
+    h2 {
+        padding-top:100px;
+    }
+    p {
+        padding-top:50px;
+        padding-right:25%;
+        padding-left:25%;
+        text-align:left;
+    }
+}
+
+.offers {
+    background-image:url(images/burgerM.jpg);
+    background-size:cover;
+    background-position:center right;
+    height:720px;
+    text-align:center;
+    color:$white;
+    font-size:18.5px;
+    padding-left:40%;
+    width:$width;
+    margin:auto;
+    h2 {
+        padding-top:100px;
+    }
+    p {
+        padding-top:50px;
+    }
+}
+
+/*.giftcards {
+    text-align:center;
+    background-image:url(images/black_thread.png);
+    background-position:center center;
+    height:520px;
+    width:$width;
+    margin:auto;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    img {
+        height:200px;
+        width:200px;
+        margin:100px auto 0 auto;
+    }
+    h2 {
+        font-size:41px;
+    }
+    h3 {
+        font-size:41px;
+    }
+}*/
+
+.cta {
+    height:100%;
+    position: relative;
+    width:$width;
+    margin:auto;
+    video {
+        width:100%;
+    }
+}
+
+.ctabutton {
+    font-family:Narnfont;
+    font-size:62px;
+    color:$white;
+    background-color:$brown;
+    padding: 30px;
+    position: absolute; 
+    right: 50px;
+    top: 75%;
+    transition: all .2s ease-in;
+}
+.ctabutton:hover {
+    color:$darkerbrown;
+    background-color:$redbrown;
+}
+
+footer {
+    width:100%; 
+    display:flex; 
+    flex-wrap:wrap; 
+    flex-direction:row; 
+    justify-content: space-around;
+    background-color:$palebrown;
+    margin-top: -5px;
+    img {
+        transition: all .1s ease-in;   
+    }
+    img:hover {
+        opacity:.5;
+    }
+}
+
+.edu {
+    p {
+        font-size:12px;
+        color:$white;
+        text-align:center;
+    }
+    a {
+        color:$white;
+    }
+}
+
+.Fcolumn {
+    width: 33%;  
+    padding:2%;
+    text-align:center;
+    font-size:22px;
+    color:$white;
+}
+
+.Fcolumn2 {
+    column-count: 2;
+    font-size:19px;
+    font-style:italic;
+}
+
+.subbg {
+    background-image: url(images/arabesque.png);
+    width: $width;
+    margin:auto;
+}
+
+.subtitle {
+    width:1004px;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-family:Narnfont;
+    color:$white;
+    font-size:75px;
+    padding:15px 0;
+}
+
+.sub {
+    width:1004px;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:50px;
+    align-items:center;
+}
+
+.subspecials {
+    font-family:Century Gothic;
+    color:$white;
+    text-align:center;
+    background-color:$redbrown;
+    padding:20px;
+    font-size:18px;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.subspecialsT {
+    font-family:Century Gothic;
+    color:$white;
+    text-align:center;
+    background-color:$redbrown;
+    padding:20px;
+    font-size:18px;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.subspecials2 {
+    font-family:Century Gothic;
+    color:$white;
+    text-align:center;
+    background-color:$brown;
+    padding:20px;
+    font-size:14px;
+    margin-left:120px;
+    margin-right:120px
+}
+
+.subcolumns {
+    width:100%; 
+    max-width:1200px;
+    margin:auto;
+    display:flex; 
+    flex-wrap:wrap; 
+    flex-direction:row; 
+    justify-content: space-around;
+}
+
+.subleft {
+    font-family:Century Gothic;
+    color:$white;
+    font-size:28px;
+    text-align:right;
+    background-color:$redbrown;
+    padding:30px;
+    padding-right:15px;
+    margin-left:auto;
+}
+
+.subright {
+    margin-right: auto;
+    input {
+        @include form;
+        margin-bottom:25px;
+    }
+    textarea {
+        @include form;
+        height:250px;
+    }
+}
+
+.subright {
+    background-color:$brown;
+    padding:30px;
+}
+
+.subcontact {
+    margin:auto;
+    width:727px;
+    background-color:$redbrown;
+    color:$white;
+    text-align:center;
+    font-family:Century Gothic;
+    font-style:italic;
+    font-size:$subcontact;
+    padding:10px;
+}
+
+input[type=checkbox] {
+    height:$subcontact;
+    width:$subcontact;
+    background-color:#eee;
+}
+
+.submit {
+    text-align:center;
+    margin-top:15px;
+}
+input[type=submit]{
+    background-color: $redbrown;
+    border:solid;
+    border-width: thick;
+    color: $white;
+    padding: 5px 35px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family:Century Gothic;
+    font-size:30px;
+    font-style:italic; 
+    transition: all .3s ease-in;
+}
+
+input[type=submit]:hover{
+    background-color:$white;
+    color:$redbrown;
+}
+
+/* Tablet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 501px) and (max-width: 900px)
+{
+    
+    p {font-size:17px;}
+    
+    .note {
+    font-size:17px;
+    padding-bottom:5px;
+    padding-top:0px;
+}
+    header {
+        h1 {
+            font-size:90px;
+            padding-top:230px;
+            padding-left:25px;
+        }
+        h2 {
+            font-size:43px;
+            padding-left:40px;
+        }
+    }
+    
+    .about {
+        h2 {
+            font-size:50px;
+            padding-top:75px;
+        }
+        p {
+            padding-top:25px;
+            padding-right:15%;
+            padding-left:15%;
+        }
+    }
+
+    .offers {
+        padding-left:20%;
+        h2 {
+            padding-top:50px;
+            font-size:50px;
+        }
+    }
+    
+    .giftcards {
+        img {
+            margin-top:200px;
+        }
+        h2 {
+            font-size:64px;
+            padding-top:10px;
+        }
+        h3 {
+            padding-top:5px;
+            font-size:50px;
+        }
+}
+    
+.ctabutton {
+    font-size:31px;
+    padding: 25px;
+    right: 50px;
+    top: 75%;
+}
+
+footer {
+   width:100%;
+    display:flex; 
+    flex-wrap:wrap; 
+    flex-direction:row; 
+    justify-content: space-around;
+}
+.Fcolumn {
+    width: 50%;
+}
+    
+    .subtitle {
+    font-size:65px;
+    padding-bottom:10px;
+}
+
+.subleft {
+    font-size:24px;
+    padding:25px 10px;
+    padding-right:5px;
+}
+
+.subright {
+    margin-right: auto;
+    input {
+        margin-bottom:15px;
+    }
+    textarea {
+        height:250px;
+    }
+}
+
+.subright {
+    padding:30px;
+}
+
+.subcontact {
+    width: 479px;
+    font-size:$subcontact2;
+}
+
+input[type=checkbox] {
+    height:$subcontact2;
+    width:$subcontact2;
+}
+ 
+}
+/* Mobile
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 500px)
+{
+    nav {display: none;}
+    
+    .note {
+        //font-size: 15px;
+        //padding-top:0px;
+        //width:100%;
+        display:none;
+    }
+    
+    header {
+    //width:500px;
+    width:100%;
+    background-position:right;
+    h1 {
+        font-size:85px;
+        padding-top:230px;
+        padding-left:0px;
+        text-align:center;
+    }
+    h2 {
+    font-size:34px;
+    text-align:right;
+    padding-left:0px;
+    padding-right:25px
+    }
+}
+.about, .offers, .cta, .subbg {
+    width: 100%;
+}
+.specialsheader {
+    padding-top:80px;
+}
+.contactheader {
+    background-position:center center;
+    h1{
+        padding-top:270px
+    }
+}
+    
+.about {
+    h2 {
+        font-size:45px;
+        padding-top:50px;
+    }
+    p {
+        padding-top:35px;
+        padding-right:10%;
+        padding-left:10%;
+    }
+} 
+    
+    .offers {
+        padding-left:0%;
+        h2 {
+            padding-top:50px;
+            font-size:45px;
+        }
+    }
+    .cta {
+        background-image:url(images/beerfillstill.jpg);
+        background-size:cover;
+        background-position:center;
+        height:600px;
+        video {
+            opacity:0;
+        }
+    }
+.ctabutton {
+    font-size:44px;
+    text-align:center;
+    padding: 25px;
+    margin-top:232px;
+    right: 0px;
+    top: 0%;
+    position:static;
+    transition: all .2s ease-in;
+    color:$darkerbrown;
+    background-color:$redbrown;
+}
+.ctabutton:hover {
+    color:$white;
+    background-color:$brown;
+    }
+
+footer {
+    flex-direction:column;
+}
+.Fcolumn {
+    width: 100%;
+    padding-top:15px;
+    padding-bottom:30px;
+} 
+.subtitle {
+    font-size: 55px;
+}
+    .subspecialsT {
+    font-size:17px;
+    margin-left:0px;
+    margin-right:0px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.subspecials2 {
+    padding:20px;
+    font-size:14px;
+    margin-left:80px;
+    margin-right:80px;
+}
+    
+    .subleft {
+    font-size:24px;
+    padding:10px;
+}
+.subright {
+    input {
+        font-size:17px;
+        text-align:left;
+        width:300px;
+        font-family:Century Gothic;
+        margin-bottom:23px;
+    }
+    textarea {
+        font-size:17px;
+        text-align:left;
+        width:300px;
+        font-family:Century Gothic;
+        height:100px;
+        }
+}
+.subright {
+    padding:10px;
+}
+.subcontact {
+    font-size:20px;
+    width:445px;
+}
+
+    .submit {
+    margin-top:25px;
+    margin-bottom:-20px;
+}
+
+}

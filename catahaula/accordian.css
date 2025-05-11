@@ -1,0 +1,68 @@
+/* FontAwesome */ 
+	@font-face{ 
+		font-family: "FontAwesome"; 
+		src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0"); 
+		src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg"); 
+		font-weight: normal; 
+		font-style: normal; 
+	} 
+
+main {width:100%; max-width:1000px; margin:auto;}
+
+/* Page styling */ 
+	/* Min */ 
+	@media (min-width: 0){ 
+		html{ min-width: 200px; min-height: 100%; } 
+			body{ min-width: 200px; min-height: 100%; font-size: 62.5%; background: #75391c; background-size: 50%; } 
+				#body{ margin: 0 auto; padding: 2.5em; } 
+					.accordion{  } 
+						.accordion > .module{ position: relative; } 
+							.accordion > .module > .head:before{ content: "\f0da"; position: absolute; top: 2em; left: 1.5em; display: block; color: #75391c; font-family: "FontAwesome"; color:#ebebeb;} 
+							.accordion > .module.active > .head:before{ content: "\f0d7"; } 
+							.accordion > .module > .head{ padding: 2em 2em 2em 1em; background: #b94e1a; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; } 
+							.accordion > .module > .head:hover{ background: #b93c00; } 
+								.accordion > .module > .head > p{ overflow: hidden; padding-left: 2.5em; color: #ebebeb; font-family:Century Gothic; font-weight: 600; text-transform: uppercase; white-space: nowrap; text-overflow: ellipsis; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; line-height: 1.25; } 
+							.accordion > .module > .body{ padding: 2.5em; background: #75391c; border-width: 0 0.1em 0.1em; border-style: solid; border-color: #eee;color:#ebebeb; font-family:Century Gothic; } 
+					#body > .bottom{ text-align: right; }
+						#body > .bottom > button.save{ overflow: hidden; display: inline-block; margin-top: 2.5em; padding: 1.5em 2em; width: 100%; max-width: 100%; color: #ebebeb; white-space: nowrap; text-overflow: ellipsis; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background: #1a95eb; cursor: pointer;} 
+						#body > .bottom > button.save:hover{ background: #1687d6; } 
+						#body > .bottom > button.save:active{ background: #117ac4; } 
+	}
+	/* Bricks */ 
+	@media (min-width: 200px){ 
+		html{  } 
+			body{ font-size: 5vw; } 
+	} 
+	/* Smartphones */ 
+	@media (min-width: 300px){ 
+		html{  } 
+			body{ font-size: 93.75%; } 
+	} 
+	/* Retina */ 
+	@media (min-width: 479px){ 
+		html{  } 
+			body{  } 
+	} 
+	/* Tablet */ 
+	@media (min-width: 768px){ 
+		html{  } 
+			body{  } 
+				#body{  } 
+					#body > .bottom{  } 
+						#body > .bottom > button.save{ width: auto; } 
+	} 
+	/* Desktop */ 
+	@media (min-width: 979px){ 
+		html{  } 
+			body{  } 
+	} 
+	/* Widescreen */ 
+	@media (min-width: 1200px){ 
+		html{  } 
+			body{ font-size: 1.25vw; } 
+	} 
+	/* Max */ 
+	@media (min-width: 2800px){ 
+		html{  } 
+			body{ font-size: 225% } 
+	} 
